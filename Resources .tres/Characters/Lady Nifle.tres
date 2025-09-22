@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=2 format=3 uid="uid://c0mhs6e1cvxbw"]
+
+[ext_resource type="Script" uid="uid://cwiqti30177xl" path="res://Scripts/global/CharacterDataResource.gd" id="1_votgs"]
+
+[resource]
+script = ExtResource("1_votgs")
+name = "Lady Nifle"
+hp = 333

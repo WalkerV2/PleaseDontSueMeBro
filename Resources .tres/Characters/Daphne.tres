@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=2 format=3 uid="uid://do4k8oa817jbr"]
+
+[ext_resource type="Script" uid="uid://cwiqti30177xl" path="res://Scripts/global/CharacterDataResource.gd" id="1_mbnwk"]
+
+[resource]
+script = ExtResource("1_mbnwk")
+name = "Daphne"
+hp = 54
+shield = 24
+def = 56
+umbro_atk = 87
+skill_dmg = 9.0
+skill_range = 7.0
+skill_duration = 99.0
+skill_efficiency = 9.0
+morale = 4.0
+berserker = 88.0
+weapon_mastery = 5
+level = 66

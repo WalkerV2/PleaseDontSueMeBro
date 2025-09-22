@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bnpiuqi05uapx"
+path="res://.godot/imported/3.bmp-8fe37a5151e4d707efb0e5683c6f83be.res"
+
+[deps]
+
+source_file="res://3.bmp"
+dest_files=["res://.godot/imported/3.bmp-8fe37a5151e4d707efb0e5683c6f83be.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

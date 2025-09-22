@@ -1,0 +1,5375 @@
+[gd_scene load_steps=64 format=3 uid="uid://bmvgrjb4meb1d"]
+
+[ext_resource type="Script" uid="uid://byrkelupwqup1" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://dnrlj578bbrfb" path="res://avatar_control.gd" id="1_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://c08t4keni2uk0" path="res://bg.jpg" id="2_sky72"]
+[ext_resource type="Texture2D" uid="uid://dtljayf7gx6jf" path="res://bg-detail.png" id="3_ee4bf"]
+[ext_resource type="BitMap" uid="uid://bbbinckuixmc1" path="res://2.bmp" id="3_kbped"]
+[ext_resource type="BitMap" uid="uid://bnpiuqi05uapx" path="res://3.bmp" id="4_fj5cn"]
+[ext_resource type="Script" uid="uid://b4kdw2tk82glv" path="res://weapon_control.gd" id="5_kbped"]
+[ext_resource type="Script" uid="uid://532wg4adh2ks" path="res://avatar_icon.gd" id="6_0ytqx"]
+[ext_resource type="Script" uid="uid://c4jji01v8hdyn" path="res://avatar_wedge_control.gd" id="7_xvdhi"]
+[ext_resource type="Script" uid="uid://d3xbx032gansr" path="res://weapon_icon.gd" id="9_pxugv"]
+[ext_resource type="Script" uid="uid://cm04benq03cad" path="res://intron_control.gd" id="10_am1vj"]
+[ext_resource type="Texture2D" uid="uid://dvajickcukoo1" path="res://Assets/Images/Icons/02.png" id="11_g31lc"]
+[ext_resource type="Script" uid="uid://c2ua6b0h6vyrd" path="res://intron_icon.gd" id="12_knq72"]
+[ext_resource type="Texture2D" uid="uid://b8px1o74c3l7k" path="res://Assets/Images/Avatar/Fullart/Berenica.png" id="13_7bdvj"]
+[ext_resource type="Texture2D" uid="uid://cllexov0vs0kf" path="res://Assets/Images/Splash Art/bg-text.jpg" id="13_xvdhi"]
+[ext_resource type="Script" uid="uid://c8aj6iatd0sy1" path="res://geniemon_control.gd" id="14_g31lc"]
+[ext_resource type="Script" uid="uid://1qil1uqqfd5w" path="res://weapon_wedge_control.gd" id="14_knq72"]
+[ext_resource type="Texture2D" uid="uid://bd7akamqqub4r" path="res://Assets/Images/Avatar/Fullart/Daphne.png" id="14_q6xdd"]
+[ext_resource type="Texture2D" uid="uid://do5qplav42ctt" path="res://Assets/Images/Avatar/Fullart/Fina.png" id="15_lqmkq"]
+[ext_resource type="Texture2D" uid="uid://cofiw0kjqxmju" path="res://Assets/Images/Avatar/Fullart/Fushu.png" id="16_il8ev"]
+[ext_resource type="Texture2D" uid="uid://bjblnoi3q2s2i" path="res://Assets/Images/Avatar/Fullart/Hellfire.png" id="17_l62jy"]
+[ext_resource type="Texture2D" uid="uid://1c8dutsdlxa6" path="res://icon.svg" id="17_pi4e7"]
+[ext_resource type="Texture2D" uid="uid://q0wnesq04rvq" path="res://Assets/Images/Avatar/Fullart/Lady Nifle.png" id="18_8v3ii"]
+[ext_resource type="Script" uid="uid://dejdxhhonmge7" path="res://equip_test.gd" id="18_pi4e7"]
+[ext_resource type="Script" uid="uid://cusj4wtpby7c1" path="res://char_wedge_slot_1.gd" id="19_2pj6v"]
+[ext_resource type="Texture2D" uid="uid://du6u3dyodmhde" path="res://Assets/Images/Avatar/Fullart/Luca.png" id="19_3chmk"]
+[ext_resource type="Texture2D" uid="uid://bvfij357kx35n" path="res://Assets/Images/Avatar/Fullart/Lynn.png" id="20_f5pai"]
+[ext_resource type="Script" uid="uid://d2e5u76to8x3b" path="res://char_wedge_slot_2.gd" id="20_w5605"]
+[ext_resource type="Texture2D" uid="uid://do6fkh1s2lvso" path="res://Assets/Images/Avatar/Fullart/Margie.png" id="21_2xhs3"]
+[ext_resource type="Script" uid="uid://cmsbbyvlxwaf5" path="res://char_wedge_slot_3.gd" id="21_87wg0"]
+[ext_resource type="Script" uid="uid://cod52hjjnvhk3" path="res://char_wedge_slot_4.gd" id="22_3ag6a"]
+[ext_resource type="Texture2D" uid="uid://d3txseodpo1uv" path="res://Assets/Images/Avatar/Fullart/Outsider.png" id="22_olwrp"]
+[ext_resource type="Script" uid="uid://gmidad6rdvb4" path="res://char_wedge_slot_5.gd" id="23_b3rfh"]
+[ext_resource type="Script" uid="uid://bpbrsqhb4jmhf" path="res://char_wedge_slot_6.gd" id="24_5axgr"]
+[ext_resource type="Script" uid="uid://chyyjnnwt14bw" path="res://char_wedge_slot_7.gd" id="25_wfgqd"]
+[ext_resource type="Texture2D" uid="uid://cjdejum7e03jm" path="res://Assets/Images/Currencies/Untitled.png" id="26_2pj6v"]
+[ext_resource type="Script" uid="uid://douk14xb0ka65" path="res://char_wedge_slot_8.gd" id="26_jkes7"]
+
+[sub_resource type="Animation" id="Animation_oq4si"]
+resource_name = "IntronAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/Intron1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/Intron2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/Intron3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/Intron4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/Intron5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/Intron6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_m4egf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/Intron1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/Intron2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/Intron3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/Intron4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/Intron5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/Intron6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pi4e7"]
+_data = {
+&"IntronAnimation": SubResource("Animation_oq4si"),
+&"RESET": SubResource("Animation_m4egf")
+}
+
+[sub_resource type="Animation" id="Animation_knq72"]
+resource_name = "AvatarWedgeAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton10:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton7:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton8:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton9:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_xvdhi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton10:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton7:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton8:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AWedgeSContainer/AWedgeHContainer/TextureButton9:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oq4si"]
+_data = {
+&"AvatarWedgeAnimation": SubResource("Animation_knq72"),
+&"RESET": SubResource("Animation_xvdhi")
+}
+
+[sub_resource type="Animation" id="Animation_ee4bf"]
+resource_name = "AvatarAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AvatarSContainer/AvatarHContainer/Berenica:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AvatarSContainer/AvatarHContainer/Daphne:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AvatarSContainer/AvatarHContainer/Fina:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AvatarSContainer/AvatarHContainer/Fushu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AvatarSContainer/AvatarHContainer/Hellfire:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AvatarSContainer/AvatarHContainer/Lady Nifle:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AvatarSContainer/AvatarHContainer/Rebecca:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AvatarSContainer/AvatarHContainer/Lynn:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AvatarSContainer/AvatarHContainer/Margie:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AvatarSContainer/AvatarHContainer/Outsider:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AvatarLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_kbped"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AvatarSContainer/AvatarHContainer/Berenica:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AvatarSContainer/AvatarHContainer/Daphne:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AvatarSContainer/AvatarHContainer/Fina:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AvatarSContainer/AvatarHContainer/Fushu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AvatarSContainer/AvatarHContainer/Hellfire:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AvatarSContainer/AvatarHContainer/Lady Nifle:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AvatarSContainer/AvatarHContainer/Rebecca:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../AvatarSContainer/AvatarHContainer/Lynn:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AvatarSContainer/AvatarHContainer/Margie:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AvatarSContainer/AvatarHContainer/Outsider:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AvatarLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fj5cn"]
+_data = {
+&"AvatarAnimation": SubResource("Animation_ee4bf"),
+&"RESET": SubResource("Animation_kbped")
+}
+
+[sub_resource type="Animation" id="Animation_6a6wx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeaponHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeaponHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WeaponHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WeaponHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WeaponHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WeaponHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("WeaponHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WeaponHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../WeaponIcon/WeaponLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_iy58a"]
+resource_name = "WeaponAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeaponHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeaponHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WeaponHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WeaponHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WeaponHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WeaponHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("WeaponHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WeaponHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../WeaponIcon/WeaponLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_sky72"]
+resource_name = "WeaponMeleeAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeaponHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeaponHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WeaponHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WeaponHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WeaponHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WeaponHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("WeaponHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WeaponHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../WeaponIcon/WeaponLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_0ytqx"]
+resource_name = "WeaponRangedAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WeaponHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WeaponHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WeaponHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WeaponHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WeaponHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WeaponHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("WeaponHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("WeaponHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("WeaponHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WeaponHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../WeaponIcon/WeaponLevel:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sky72"]
+_data = {
+&"RESET": SubResource("Animation_6a6wx"),
+&"WeaponAnimation": SubResource("Animation_iy58a"),
+&"WeaponMeleeAnimation": SubResource("Animation_sky72"),
+&"WeaponRangedAnimation": SubResource("Animation_0ytqx")
+}
+
+[sub_resource type="Animation" id="Animation_l62jy"]
+resource_name = "DELETE"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kuuv8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pi4e7"]
+resource_name = "WeaponWedgeAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../WWedgeSContainer/WWedgeHContainer/TextureButton10:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ou021"]
+_data = {
+&"DELETE": SubResource("Animation_l62jy"),
+&"RESET": SubResource("Animation_kuuv8"),
+&"WeaponWedgeAnimation": SubResource("Animation_pi4e7")
+}
+
+[sub_resource type="Animation" id="Animation_7bdvj"]
+resource_name = "GenieGreenAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_3fl80"]
+resource_name = "GeniemonAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_q6xdd"]
+resource_name = "GeniemonBlueAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_il8ev"]
+resource_name = "GeniemonGoldAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_n8v1s"]
+resource_name = "GeniemonGreyAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.99, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, false]
+}
+
+[sub_resource type="Animation" id="Animation_lqmkq"]
+resource_name = "GeniemonPurpleAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_8jbwv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton9:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton10Grey:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton11:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton12:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton13:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton14:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton15:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton16:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton17:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../GeniemonSContainer/GeniemonHContainer/TextureButton18:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v61lp"]
+_data = {
+&"GenieGreenAnimation": SubResource("Animation_7bdvj"),
+&"GeniemonAnimation": SubResource("Animation_3fl80"),
+&"GeniemonBlueAnimation": SubResource("Animation_q6xdd"),
+&"GeniemonGoldAnimation": SubResource("Animation_il8ev"),
+&"GeniemonGreyAnimation": SubResource("Animation_n8v1s"),
+&"GeniemonPurpleAnimation": SubResource("Animation_lqmkq"),
+&"RESET": SubResource("Animation_8jbwv")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0fbet")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(2.0325725, 2.0325725, 2.0325725, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sky72")
+expand_mode = 1
+
+[node name="notes, do not delete" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2133.0
+offset_top = 238.0
+offset_right = 3360.0
+offset_bottom = 1181.0
+text = "To-do implement a rarity selector using optionbutton   (use the \"item_focused index:int\" signal n the node section
+
+redo the intron system - kind of did it
+redo all of the character .tres - 0 progress
+weapon.tres
+genimon.tres
+
+Make the character intron dictionary - done, no data tho
+
+try come up with a stat page
+
+demon wedge display type shit again - no progress
+level selectors for fookin everything - no progress
+also gotta figure out how the hellall of these are going to fit on the screen - made window bigger
+
+When using the spinbox, have the value save PER CHARACTER / WEAPON / GENIEMON / WEDGE / ETC. - no progress
+
+wedge types is apparently 5 btw, 
+Character
+Melee Weapon
+Ranged Weapon
+Consonance Melee Weapon
+Consonance Ranged Weapon
+All wedges have 5 rarities
+
+Grey, Green,blue purple,golden
+"
+
+[node name="IntronControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchor_top = 0.193
+anchor_bottom = 0.224
+offset_left = 1.0
+offset_top = -116.439995
+offset_right = 101.0
+offset_bottom = -49.92
+scale = Vector2(1.5, 1.5)
+script = ExtResource("10_am1vj")
+
+[node name="IntronIcon" type="TextureButton" parent="IntronControl"]
+self_modulate = Color(0.70796657, 0.7079665, 0.7079665, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -90.000015
+offset_right = 119.0
+offset_bottom = 8.999985
+toggle_mode = true
+texture_normal = ExtResource("11_g31lc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("12_knq72")
+
+[node name="IntronAnimPlayer" type="AnimationPlayer" parent="IntronControl/IntronIcon"]
+libraries = {
+&"": SubResource("AnimationLibrary_pi4e7")
+}
+
+[node name="IntronSContainer" type="ScrollContainer" parent="IntronControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0400001
+anchor_top = 0.98700005
+anchor_right = 1.0400001
+anchor_bottom = 0.98700005
+offset_top = -78.03335
+offset_right = 373.0
+offset_bottom = -0.033348083
+
+[node name="IntronHContainer" type="HBoxContainer" parent="IntronControl/IntronSContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Intron1" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron1Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Lorem Ipsum"
+autowrap_mode = 2
+
+[node name="Intron2" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron2Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Ipsum and then lorem"
+autowrap_mode = 2
+
+[node name="Intron3" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron3Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 7
+text = "ipsum and lorem were the friends we made along  the way"
+autowrap_mode = 2
+
+[node name="Intron4" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron4Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "lorem"
+autowrap_mode = 2
+
+[node name="Intron5" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron5Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "and "
+autowrap_mode = 2
+
+[node name="Intron6" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+visible = false
+self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+custom_minimum_size = Vector2(50, 78)
+layout_mode = 2
+texture = ExtResource("13_xvdhi")
+expand_mode = 1
+
+[node name="Intron6Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "ipsum"
+autowrap_mode = 2
+
+[node name="AvatarWedgeControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchor_top = 0.36100003
+anchor_bottom = 0.36100003
+offset_top = -149.88004
+offset_right = 100.0
+offset_bottom = -49.880035
+scale = Vector2(1.5, 1.5)
+script = ExtResource("7_xvdhi")
+
+[node name="AvatarWedgeIcon" type="TextureButton" parent="AvatarWedgeControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 2.24
+anchor_bottom = 2.24
+offset_top = -224.0
+offset_right = 100.0
+offset_bottom = -124.0
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AvatarWedgeAnimPlayer" type="AnimationPlayer" parent="AvatarWedgeControl/AvatarWedgeIcon"]
+libraries = {
+&"": SubResource("AnimationLibrary_oq4si")
+}
+
+[node name="AWedgeSContainer" type="ScrollContainer" parent="AvatarWedgeControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 55.0
+offset_right = 1152.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="AWedgeHContainer" type="HBoxContainer" parent="AvatarWedgeControl/AWedgeSContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -45
+
+[node name="TextureButton1" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton1"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton3" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton4" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton4"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton5" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton5"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton6" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton6"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton7" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton7"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton8" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton8"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton9" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton9"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton10" type="TextureButton" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="AvatarWedgeControl/AWedgeSContainer/AWedgeHContainer/TextureButton10"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="AvatarControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -150.0
+offset_right = 100.0
+offset_bottom = -50.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_fj5cn")
+
+[node name="AvatarIcon" type="TextureButton" parent="AvatarControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+script = ExtResource("6_0ytqx")
+
+[node name="AvatarAnimPlayer" type="AnimationPlayer" parent="AvatarControl/AvatarIcon"]
+libraries = {
+&"": SubResource("AnimationLibrary_fj5cn")
+}
+
+[node name="FireType" type="TextureButton" parent="AvatarControl/AvatarIcon"]
+self_modulate = Color(3.3539472, 0.4395048, 1.1744511, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 19.0
+offset_top = 42.0
+offset_right = 59.0
+offset_bottom = 82.0
+rotation = -1.0995574
+pivot_offset = Vector2(40, 40)
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Water" type="TextureButton" parent="AvatarControl/AvatarIcon"]
+self_modulate = Color(0.695727, 0.64883095, 4.1503997, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 9.999998
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 64.0
+rotation = -1.0995574
+pivot_offset = Vector2(40, 40)
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="AvatarLevel" type="SpinBox" parent="AvatarControl/AvatarIcon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -55.0
+offset_right = 80.5625
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 1.1170107
+scale = Vector2(0.6, 0.6)
+
+[node name="AvatarIcon" type="TextureRect" parent="AvatarControl/AvatarIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="AvatarSContainer" type="ScrollContainer" parent="AvatarControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 55.0
+offset_top = -50.0
+offset_right = 1152.0
+offset_bottom = 50.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AvatarHContainer" type="HBoxContainer" parent="AvatarControl/AvatarSContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = -45
+
+[node name="Berenica" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.35019034, 0.5158157, 0.95224863, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Berenica"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("13_7bdvj")
+expand_mode = 1
+flip_h = true
+
+[node name="Daphne" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.691807, 0.2569521, 0.95348257, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Daphne"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("14_q6xdd")
+expand_mode = 1
+flip_h = true
+
+[node name="Fina" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.7699962, 0.29324892, 0.6935779, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Fina"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("15_lqmkq")
+expand_mode = 1
+flip_h = true
+
+[node name="Fushu" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.9529374, 0.09257535, 0.55227375, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Fushu"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("16_il8ev")
+expand_mode = 1
+flip_h = true
+
+[node name="Hellfire" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.8149425, 0.30174825, 0.27836812, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Hellfire"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("17_l62jy")
+expand_mode = 1
+flip_h = true
+
+[node name="Lady Nifle" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.81308365, 0.45899814, 0.10108406, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Lady Nifle"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("18_8v3ii")
+expand_mode = 1
+flip_h = true
+
+[node name="Rebecca" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.9559929, 0.6730822, 0.00942169, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Rebecca"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("19_3chmk")
+expand_mode = 1
+flip_h = true
+
+[node name="Lynn" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.60534, 0.61866397, 0.10125252, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Lynn"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("20_f5pai")
+expand_mode = 1
+flip_h = true
+
+[node name="Margie" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0.30448708, 0.65637463, 0.18610337, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Margie"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("21_2xhs3")
+expand_mode = 1
+flip_h = true
+
+[node name="Outsider" type="TextureButton" parent="AvatarControl/AvatarSContainer/AvatarHContainer"]
+visible = false
+self_modulate = Color(0, 0.5133009, 0.38999036, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="AvatarControl/AvatarSContainer/AvatarHContainer/Outsider"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 100)
+mouse_filter = 2
+texture = ExtResource("22_olwrp")
+expand_mode = 1
+flip_h = true
+
+[node name="WeaponControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_right = 100.0
+offset_bottom = 100.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("5_kbped")
+
+[node name="WeaponIcon" type="TextureButton" parent="WeaponControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+toggle_mode = true
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_pxugv")
+
+[node name="WeaponAnimPlayer" type="AnimationPlayer" parent="WeaponControl/WeaponIcon"]
+root_node = NodePath("../../WeaponSContainer")
+libraries = {
+&"": SubResource("AnimationLibrary_sky72")
+}
+
+[node name="Melee" type="TextureButton" parent="WeaponControl/WeaponIcon"]
+self_modulate = Color(1.1317949, 2.56364, 1.685469, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 41.000004
+offset_top = -18.0
+offset_right = 81.0
+offset_bottom = 22.0
+rotation = 1.1170107
+toggle_mode = true
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Ranged" type="TextureButton" parent="WeaponControl/WeaponIcon"]
+self_modulate = Color(1.289929, 1.3502687, 2.2122645, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 43.0
+offset_top = -17.0
+offset_right = 83.0
+offset_bottom = 23.0
+rotation = 1.1170107
+pivot_offset = Vector2(-18, 0)
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WeaponLevel" type="SpinBox" parent="WeaponControl/WeaponIcon"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -23.0
+offset_top = 47.0
+offset_right = 63.5625
+offset_bottom = 78.0
+grow_horizontal = 0
+rotation = -1.1170107
+scale = Vector2(0.6, 0.6)
+
+[node name="WeaponSContainer" type="ScrollContainer" parent="WeaponControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 55.0
+offset_top = -50.0
+offset_right = 1152.0
+offset_bottom = 50.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WeaponHContainer" type="HBoxContainer" parent="WeaponControl/WeaponSContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = -45
+
+[node name="TextureButton1" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.35019034, 0.5158157, 0.95224863, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.691807, 0.2569521, 0.95348257, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton3" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.7699962, 0.29324892, 0.6935779, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton4" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.9529374, 0.09257535, 0.55227375, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton5" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.8149425, 0.30174825, 0.27836812, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton6" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.81308365, 0.45899814, 0.10108406, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton7" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.9559929, 0.6730822, 0.00942169, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton8" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.60534, 0.61866397, 0.10125252, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton9" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0.30448708, 0.65637463, 0.18610337, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton10" type="TextureButton" parent="WeaponControl/WeaponSContainer/WeaponHContainer"]
+visible = false
+self_modulate = Color(0, 0.5133009, 0.38999036, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart1" type="TextureRect" parent="WeaponControl/WeaponSContainer/WeaponHContainer/TextureButton10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WeaponWedgeControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchor_top = 0.63900006
+anchor_bottom = 0.63900006
+offset_top = -0.12005615
+offset_right = 100.0
+offset_bottom = 99.879944
+scale = Vector2(1.5, 1.5)
+script = ExtResource("14_knq72")
+
+[node name="WeaponWedgeIcon" type="TextureButton" parent="WeaponWedgeControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="WeaponWedgeAnimPlayer" type="AnimationPlayer" parent="WeaponWedgeControl/WeaponWedgeIcon"]
+libraries = {
+&"": SubResource("AnimationLibrary_ou021")
+}
+
+[node name="WWedgeSContainer" type="ScrollContainer" parent="WeaponWedgeControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 55.0
+offset_right = 1152.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="WWedgeHContainer" type="HBoxContainer" parent="WeaponWedgeControl/WWedgeSContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -45
+
+[node name="TextureButton1" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton1"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton2" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton3" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton4" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton4"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton5" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton5"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton6" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton6"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton7" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton7"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton8" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+self_modulate = Color(6.020655, 2.9632158, 1.7563317, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton8"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton9" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton9"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TextureButton10" type="TextureButton" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("4_fj5cn")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="Fullart2" type="TextureRect" parent="WeaponWedgeControl/WWedgeSContainer/WWedgeHContainer/TextureButton10"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="GeniemonControl" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchor_top = 0.77800006
+anchor_bottom = 0.77800006
+offset_top = -0.24005127
+offset_right = 100.0
+offset_bottom = 99.75995
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+script = ExtResource("14_g31lc")
+
+[node name="GeniemonIcon" type="TextureButton" parent="GeniemonControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeniemonAnimPlayer" type="AnimationPlayer" parent="GeniemonControl/GeniemonIcon"]
+libraries = {
+&"": SubResource("AnimationLibrary_v61lp")
+}
+
+[node name="GrayButton" type="TextureButton" parent="GeniemonControl/GeniemonIcon"]
+self_modulate = Color(1.3802502, 1.4073048, 0, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 38.55037
+offset_top = -22.000004
+offset_right = 88.55037
+offset_bottom = 27.999996
+rotation = 1.0995574
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GreenButton" type="TextureButton" parent="GeniemonControl/GeniemonIcon"]
+self_modulate = Color(1.5757716, 0.0023871036, 1.5784135, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 31.883621
+offset_top = -7.3332562
+offset_right = 81.88362
+offset_bottom = 42.666744
+rotation = 1.0995574
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BlueButton" type="TextureButton" parent="GeniemonControl/GeniemonIcon"]
+self_modulate = Color(0.3778188, 0.62561816, 2.107, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 24.55037
+offset_top = 7.3333697
+offset_right = 74.55037
+offset_bottom = 57.33337
+rotation = 1.0995574
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PurpleButton" type="TextureButton" parent="GeniemonControl/GeniemonIcon"]
+self_modulate = Color(0.33755335, 1.4279996, 0.70735234, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 16.55037
+offset_top = 22.000057
+offset_right = 66.55037
+offset_bottom = 72.00006
+rotation = 1.0995574
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GoldButton" type="TextureButton" parent="GeniemonControl/GeniemonIcon"]
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 9.216994
+offset_top = 36.666744
+offset_right = 59.216995
+offset_bottom = 86.66675
+rotation = 1.0995574
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeniemonSContainer" type="ScrollContainer" parent="GeniemonControl"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = -100.0
+offset_right = 649.3334
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="GeniemonHContainer" type="HBoxContainer" parent="GeniemonControl/GeniemonSContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = -45
+
+[node name="TextureButton1" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton3" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton4" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton5" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton6" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton7" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton8" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton9" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton10Grey" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(2.6164148, 2.6164148, 2.6164148, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton10Grey"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton11" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(0.33755335, 1.4279996, 0.70735234, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton12" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(0.33755335, 1.4279996, 0.70735234, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton13" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(0.3778188, 0.62561816, 2.107, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton13"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton14" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(0.3778188, 0.62561816, 2.107, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton14"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton15" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(1.5757716, 0.0023871036, 1.5784135, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton15"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton16" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(1.5757716, 0.0023871036, 1.5784135, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton16"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton17" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(1.3802502, 1.4073048, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton17"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="TextureButton18" type="TextureButton" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer"]
+visible = false
+self_modulate = Color(1.3802502, 1.4073048, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_ee4bf")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fullart2" type="TextureRect" parent="GeniemonControl/GeniemonSContainer/GeniemonHContainer/TextureButton18"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="WedgeEquipTest" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="WedgeEquipTest"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_bottom = 400.0
+grow_horizontal = 0
+mouse_filter = 2
+columns = 4
+
+[node name="CharWedgeSlot1" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("19_2pj6v")
+
+[node name="CharWedgeSlot2" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("20_w5605")
+
+[node name="CharWedgeSlot3" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_87wg0")
+
+[node name="CharWedgeSlot4" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("22_3ag6a")
+
+[node name="CharWedgeSlot5" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("23_b3rfh")
+
+[node name="CharWedgeSlot6" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_5axgr")
+
+[node name="CharWedgeSlot7" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("25_wfgqd")
+
+[node name="CharWedgeSlot8" type="TextureButton" parent="WedgeEquipTest/GridContainer"]
+self_modulate = Color(3.4412708, 4.917064, 2.703374, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("17_pi4e7")
+texture_click_mask = ExtResource("3_kbped")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("26_jkes7")
+
+[node name="TextureButton" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_left = -1053.0
+offset_top = 885.0
+offset_right = -903.0
+offset_bottom = 1035.0
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton7" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_left = -1001.44965
+offset_top = 739.00006
+offset_right = -851.44965
+offset_bottom = 889.00006
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="TextureButton8" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+self_modulate = Color(1.96064, 1.9990189, 0, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -982.0
+offset_top = 890.0
+offset_right = -932.0
+offset_bottom = 940.0
+rotation = -1.0995574
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="TextureButton9" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+self_modulate = Color(1.5790963, 0.24278487, 1.5790963, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -992.0
+offset_top = 868.00006
+offset_right = -942.0
+offset_bottom = 918.00006
+rotation = -1.0995574
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="TextureButton10" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+self_modulate = Color(0.3309164, 0.48359543, 2.1068149, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -1002.0
+offset_top = 846.0
+offset_right = -952.0
+offset_bottom = 896.0
+rotation = -1.0995574
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="TextureButton11" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+self_modulate = Color(0.33329472, 1.4277385, 0.7058714, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -1014.0
+offset_top = 824.00006
+offset_right = -964.0
+offset_bottom = 874.00006
+rotation = -1.0995574
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="TextureButton12" type="TextureButton" parent="WedgeEquipTest"]
+visible = false
+self_modulate = Color(1.2575418, 1.2575418, 1.2575418, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -1025.0
+offset_top = 802.00006
+offset_right = -975.0
+offset_bottom = 852.00006
+rotation = -1.0995574
+texture_normal = ExtResource("3_ee4bf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[node name="EquipTest" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(2.0000799, 1.1489936, 6.578338, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.03
+anchor_top = 3.3500001
+anchor_right = -4.03
+anchor_bottom = 3.3500001
+offset_left = 9054.601
+offset_top = -3283.0002
+offset_right = 9154.601
+offset_bottom = -3183.0002
+texture = ExtResource("26_2pj6v")
+expand_mode = 1
+script = ExtResource("18_pi4e7")
+
+[node name="CharacterStats" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="StatBlock" type="HBoxContainer" parent="CharacterStats"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Stat Numbers" type="VBoxContainer" parent="CharacterStats/StatBlock"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HpLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="ShieldLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="DefLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="AtkLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="SkillDmgLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="SkillRangeLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="SkillDurationLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="SkillEfficiencyLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MoraleLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="BerserkerLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="WeaponMasteryLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="LevelLabel" type="Label" parent="CharacterStats/StatBlock/Stat Numbers"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Stat Names" type="VBoxContainer" parent="CharacterStats/StatBlock"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Name"
+
+[node name="HP" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "HP"
+
+[node name="Shield" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Shield"
+
+[node name="DeF" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Def"
+
+[node name="Atk" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Atk"
+
+[node name="Skill Dmg" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Skill DMG"
+
+[node name="Skill Range" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Skill Dange"
+
+[node name="Skill Duration" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Skill Duration"
+
+[node name="Skill Efficiency" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Skill Efficiency"
+
+[node name="Morale" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Morale"
+
+[node name="Berserker" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Berserker"
+
+[node name="WeaponMastery" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "WeaponMastery"
+
+[node name="Level" type="Label" parent="CharacterStats/StatBlock/Stat Names"]
+layout_mode = 2
+text = "Level
+"
+
+[connection signal="button_down" from="IntronControl/IntronIcon" to="IntronControl" method="_on_intron_icon_button_down"]
+[connection signal="toggled" from="IntronControl/IntronIcon" to="IntronControl" method="_on_intron_icon_toggled"]
+[connection signal="button_down" from="AvatarWedgeControl/AvatarWedgeIcon" to="AvatarWedgeControl" method="_on_avatar_wedge_icon_button_down"]
+[connection signal="toggled" from="AvatarControl/AvatarIcon" to="AvatarControl" method="_on_avatar_icon_toggled"]
+[connection signal="button_down" from="AvatarControl/AvatarIcon/FireType" to="AvatarControl/AvatarIcon" method="_on_fire_type_button_down"]
+[connection signal="button_down" from="AvatarControl/AvatarIcon/Water" to="AvatarControl/AvatarIcon" method="_on_water_button_down"]
+[connection signal="button_down" from="AvatarControl/AvatarSContainer/AvatarHContainer/Berenica" to="AvatarControl/AvatarIcon" method="_on_berenica_button_down"]
+[connection signal="button_down" from="WeaponControl/WeaponIcon" to="WeaponControl" method="_on_weapon_icon_button_down"]
+[connection signal="toggled" from="WeaponControl/WeaponIcon" to="WeaponControl" method="_on_weapon_icon_toggled"]
+[connection signal="animation_finished" from="WeaponControl/WeaponIcon/WeaponAnimPlayer" to="WeaponControl" method="_on_weapon_anim_player_animation_finished"]
+[connection signal="button_down" from="WeaponControl/WeaponIcon/Melee" to="WeaponControl" method="_on_melee_button_down"]
+[connection signal="button_down" from="WeaponControl/WeaponIcon/Melee" to="WeaponControl/WeaponIcon" method="_on_melee_button_down"]
+[connection signal="toggled" from="WeaponControl/WeaponIcon/Melee" to="WeaponControl" method="_on_melee_toggled"]
+[connection signal="button_down" from="WeaponControl/WeaponIcon/Ranged" to="WeaponControl" method="_on_ranged_button_down"]
+[connection signal="button_down" from="WeaponControl/WeaponIcon/Ranged" to="WeaponControl/WeaponIcon" method="_on_ranged_button_down"]
+[connection signal="button_down" from="WeaponWedgeControl/WeaponWedgeIcon" to="WeaponWedgeControl" method="_on_weapon_wedge_icon_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon" to="GeniemonControl" method="_on_geniemon_icon_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon/GrayButton" to="GeniemonControl" method="_on_grey_button_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon/GreenButton" to="GeniemonControl" method="_on_green_button_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon/BlueButton" to="GeniemonControl" method="_on_blue_button_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon/PurpleButton" to="GeniemonControl" method="_on_purple_button_button_down"]
+[connection signal="button_down" from="GeniemonControl/GeniemonIcon/GoldButton" to="GeniemonControl" method="_on_gold_button_button_down"]

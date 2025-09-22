@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=2 format=3 uid="uid://bk4ypbjbynpsc"]
+
+[ext_resource type="Script" uid="uid://cwiqti30177xl" path="res://Scripts/global/CharacterDataResource.gd" id="1_yukgk"]
+
+[resource]
+script = ExtResource("1_yukgk")
+name = "Rhythm"
+hp = 313

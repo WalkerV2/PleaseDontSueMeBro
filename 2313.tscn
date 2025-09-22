@@ -1,0 +1,211 @@
+[gd_scene load_steps=8 format=3 uid="uid://djiwld2orju8"]
+
+[ext_resource type="Texture2D" uid="uid://bhr0w7b7bwkdw" path="res://Assets/Images/Splash Art/bg-left-03.jpg" id="1_w7s5k"]
+[ext_resource type="Script" uid="uid://c6w6uy347vhif" path="res://characters.gd" id="2_85m6y"]
+[ext_resource type="Texture2D" uid="uid://dtljayf7gx6jf" path="res://bg-detail.png" id="2_oteyu"]
+[ext_resource type="Texture2D" uid="uid://b8px1o74c3l7k" path="res://Assets/Images/Avatar/Fullart/Berenica.png" id="3_85m6y"]
+
+[sub_resource type="Animation" id="Animation_oteyu"]
+resource_name = "DeleteAnimLater"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureButton:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureButton:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(100, 500), Vector2(150, 500), Vector2(200, 500)]
+}
+
+[sub_resource type="Animation" id="Animation_85m6y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureButton:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureButton:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 500)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frij8"]
+_data = {
+&"DeleteAnimLater": SubResource("Animation_oteyu"),
+&"RESET": SubResource("Animation_85m6y")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w7s5k")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterWedge" type="Control" parent="TextureRect/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="Characters" type="Control" parent="TextureRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+script = ExtResource("2_85m6y")
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect/HBoxContainer/Characters"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 500.0
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/HBoxContainer/Characters/TextureButton"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -250.0
+offset_right = 280.0
+offset_bottom = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_oteyu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Characters/TextureButton"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_85m6y")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/HBoxContainer/Characters"]
+libraries = {
+&"": SubResource("AnimationLibrary_frij8")
+}
+
+[node name="Weapon" type="Control" parent="TextureRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect/HBoxContainer/Weapon"]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+texture_normal = ExtResource("2_oteyu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/HBoxContainer/Weapon/TextureButton"]
+clip_contents = true
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -100.0
+offset_right = 65.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_85m6y")
+expand_mode = 1
+
+[node name="WeaponWedge" type="Control" parent="TextureRect/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="Geniemon" type="Control" parent="TextureRect/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[connection signal="button_down" from="TextureRect/HBoxContainer/Characters/TextureButton" to="TextureRect/HBoxContainer/Characters" method="_on_texture_button_button_down"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/Characters/TextureButton" to="TextureRect/HBoxContainer/Characters" method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/HBoxContainer/Characters/TextureButton" to="TextureRect/HBoxContainer/Characters" method="_on_texture_button_mouse_exited"]

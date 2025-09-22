@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=2 format=3 uid="uid://gw84mbo1fmp4"]
+
+[ext_resource type="Script" uid="uid://cwiqti30177xl" path="res://Scripts/global/CharacterDataResource.gd" id="1_434im"]
+
+[resource]
+script = ExtResource("1_434im")
+name = "Randy"
+hp = 321

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bbbinckuixmc1"
+path="res://.godot/imported/2.bmp-59462100018189b93a39b68637a5c867.res"
+
+[deps]
+
+source_file="res://2.bmp"
+dest_files=["res://.godot/imported/2.bmp-59462100018189b93a39b68637a5c867.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
