@@ -50,14 +50,6 @@ func _update_ui(data: CharacterDataResource) -> void:
 	var introns_dict: Dictionary = IntronDictionary.get_all_introns(data.name)
 
 # Loop through fixed slots
-	for i in range(6):
-		var intron_key := "Intron_%d" % (i + 1)
-		if introns_dict.has(intron_key):
-			var label: Label = $"../../IntronControl/%sLabel" % intron_key
-			var intron: Dictionary = introns_dict[intron_key]
-			for intron_name in intron.keys():
-				label.text = "%s: %s" % [intron_name, intron[intron_name]]
-				break  # stop after first key
 
 
 

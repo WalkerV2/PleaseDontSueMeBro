@@ -22,8 +22,6 @@ config/icon="res://icon.svg"
 
 HoverTween="*res://Hover_Tween.gd"
 Assets="*res://Scripts/global/Assets.gd"
-IntronDictionary="*res://Scripts/global/IntronDictionary.gd"
-SkillDictionary="*res://Scripts/global/SkillsDictionary.gd"
 
 [display]
 
