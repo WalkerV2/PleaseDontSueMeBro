@@ -1,7 +1,6 @@
 extends Control
 @onready var avatar_anim_player: AnimationPlayer = $AvatarIcon/AvatarAnimPlayer
 
-
 func _on_avatar_icon_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		avatar_anim_player.play("AvatarAnimation")

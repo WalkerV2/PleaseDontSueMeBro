@@ -25,7 +25,7 @@ func _on_geniemon_icon_button_down() -> void:
 		gold_open = false
 
 func _on_grey_button_button_down() -> void:
-	if not geniemon_open:
+	if not gray_open:
 		geniemon_anim_player.play("GeniemonGoldAnimation")
 		gray_open = true
 	else:
@@ -40,7 +40,7 @@ func _on_grey_button_button_down() -> void:
 
 
 func _on_green_button_button_down() -> void:
-	if not geniemon_open:
+	if not green_open:
 		geniemon_anim_player.play("GeniemonPurpleAnimation")
 		green_open = true
 	else:
@@ -55,7 +55,7 @@ func _on_green_button_button_down() -> void:
 
 
 func _on_blue_button_button_down() -> void:
-	if not geniemon_open:
+	if not blue_open:
 		geniemon_anim_player.play("GeniemonBlueAnimation")
 		blue_open = true
 	else:
@@ -70,7 +70,7 @@ func _on_blue_button_button_down() -> void:
 
 
 func _on_purple_button_button_down() -> void:
-	if not geniemon_open:
+	if not purple_open:
 		geniemon_anim_player.play("GenieGreenAnimation")
 		purple_open = true
 	else:
@@ -84,7 +84,7 @@ func _on_purple_button_button_down() -> void:
 		gold_open = false
 
 func _on_gold_button_button_down() -> void:
-	if not geniemon_open:
+	if not gold_open:
 		geniemon_anim_player.play("GeniemonGreyAnimation")
 		gold_open = true
 	else:

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DemonWedgeResource" load_steps=2 format=3 uid="uid://bh4ohqovssgag"]
+
+[ext_resource type="Script" uid="uid://dvs6bdexcydru" path="res://Scripts/global/DemonWedgeResource.gd" id="1_peu5e"]
+
+[resource]
+script = ExtResource("1_peu5e")
+name = "Griffin's Inferno Wildfire"
+mod_1 = "Pyro ATK +18%"
+mod_2 = "Skill DMG +18%"
+mod_3 = "Skill Range +18%"
+level = 5
+metadata/_custom_type_script = "uid://dvs6bdexcydru"
+metadata/Pyro = 18.0
+metadata/Skill_DMG = 18.0
+metadata/Skill_Range = 18.0

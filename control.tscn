@@ -43,7 +43,7 @@ resource_name = "IntronAnimation"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/Intron1:visible")
+tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/1:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -55,7 +55,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/Intron2:visible")
+tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -67,7 +67,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/Intron3:visible")
+tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/3:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -79,7 +79,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/Intron4:visible")
+tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/4:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -91,7 +91,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/Intron5:visible")
+tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/5:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -103,7 +103,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/Intron6:visible")
+tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/6:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -118,7 +118,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/Intron1:visible")
+tracks/0/path = NodePath("../IntronSContainer/IntronHContainer/1:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -130,7 +130,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/Intron2:visible")
+tracks/1/path = NodePath("../IntronSContainer/IntronHContainer/2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -142,7 +142,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/Intron3:visible")
+tracks/2/path = NodePath("../IntronSContainer/IntronHContainer/3:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -154,7 +154,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/Intron4:visible")
+tracks/3/path = NodePath("../IntronSContainer/IntronHContainer/4:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -166,7 +166,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/Intron5:visible")
+tracks/4/path = NodePath("../IntronSContainer/IntronHContainer/5:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -178,7 +178,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/Intron6:visible")
+tracks/5/path = NodePath("../IntronSContainer/IntronHContainer/6:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -3216,7 +3216,7 @@ layout_mode = 0
 offset_left = 2133.0
 offset_top = 238.0
 offset_right = 3360.0
-offset_bottom = 1181.0
+offset_bottom = 1845.0
 text = "To-do implement a rarity selector using optionbutton   (use the \"item_focused index:int\" signal n the node section
 
 redo the intron system - kind of did it
@@ -3243,7 +3243,29 @@ Consonance Ranged Weapon
 All wedges have 5 rarities
 
 Grey, Green,blue purple,golden
-"
+
+Spinbox for levels is currently a float,
+Change it to an integer at some point
+Turn all labels into rich text labels when they  have a specialty function
+i.e. intron 1 gives +15 dmg res against fusion type enemies
+make the fusion type have a popupmenu that has the details for that specialty
+
+Characters and weapons probably have types, fire,ice,wind,earth type shit
+customize all backgrounds to reflect that type
+
+Create custom cards for the introns to reflect each character
+
+Add temporary Wedges
+
+Add wedge resources
+
+Geniemon placeholder images
+
+wedge select screen's for both character and weapon/ranged weapon /conso melee/ranged weapon
+
+Really buckle down and setup a temporary formula for the stat block math it will be easy to change later but getting a version now would be good
+
+Create a level cost calculator for everything"
 
 [node name="IntronControl" type="Control" parent="."]
 custom_minimum_size = Vector2(100, 100)
@@ -3295,7 +3317,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="Intron1" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="1" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3303,7 +3325,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron1Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron1"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3314,7 +3336,7 @@ theme_override_font_sizes/font_size = 8
 text = "Lorem Ipsum"
 autowrap_mode = 2
 
-[node name="Intron2" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="2" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3322,7 +3344,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron2Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron2"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3333,7 +3355,7 @@ theme_override_font_sizes/font_size = 8
 text = "Ipsum and then lorem"
 autowrap_mode = 2
 
-[node name="Intron3" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="3" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3341,7 +3363,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron3Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron3"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3352,7 +3374,7 @@ theme_override_font_sizes/font_size = 7
 text = "ipsum and lorem were the friends we made along  the way"
 autowrap_mode = 2
 
-[node name="Intron4" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="4" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3360,7 +3382,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron4Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron4"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/4"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3371,7 +3393,7 @@ theme_override_font_sizes/font_size = 8
 text = "lorem"
 autowrap_mode = 2
 
-[node name="Intron5" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="5" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3379,7 +3401,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron5Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron5"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/5"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3390,7 +3412,7 @@ theme_override_font_sizes/font_size = 8
 text = "and "
 autowrap_mode = 2
 
-[node name="Intron6" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
+[node name="6" type="TextureRect" parent="IntronControl/IntronSContainer/IntronHContainer"]
 visible = false
 self_modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
 custom_minimum_size = Vector2(50, 78)
@@ -3398,7 +3420,7 @@ layout_mode = 2
 texture = ExtResource("13_xvdhi")
 expand_mode = 1
 
-[node name="Intron6Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/Intron6"]
+[node name="Label" type="Label" parent="IntronControl/IntronSContainer/IntronHContainer/6"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3690,6 +3712,7 @@ stretch_mode = 0
 flip_v = true
 
 [node name="AvatarLevel" type="SpinBox" parent="AvatarControl/AvatarIcon"]
+z_index = 5
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -3704,14 +3727,17 @@ grow_horizontal = 0
 grow_vertical = 0
 rotation = 1.1170107
 scale = Vector2(0.6, 0.6)
+rounded = true
 
 [node name="AvatarIcon" type="TextureRect" parent="AvatarControl/AvatarIcon"]
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 expand_mode = 1
 
 [node name="AvatarSContainer" type="ScrollContainer" parent="AvatarControl"]
@@ -3752,8 +3778,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3780,8 +3808,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3808,8 +3838,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3836,8 +3868,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3864,8 +3898,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3892,8 +3928,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3920,8 +3958,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3948,8 +3988,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -3976,8 +4018,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -4004,8 +4048,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = 10.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0, 100)
@@ -5357,6 +5403,7 @@ text = "Level
 [connection signal="toggled" from="AvatarControl/AvatarIcon" to="AvatarControl" method="_on_avatar_icon_toggled"]
 [connection signal="button_down" from="AvatarControl/AvatarIcon/FireType" to="AvatarControl/AvatarIcon" method="_on_fire_type_button_down"]
 [connection signal="button_down" from="AvatarControl/AvatarIcon/Water" to="AvatarControl/AvatarIcon" method="_on_water_button_down"]
+[connection signal="value_changed" from="AvatarControl/AvatarIcon/AvatarLevel" to="AvatarControl/AvatarIcon" method="_on_avatar_level_value_changed"]
 [connection signal="button_down" from="AvatarControl/AvatarSContainer/AvatarHContainer/Berenica" to="AvatarControl/AvatarIcon" method="_on_berenica_button_down"]
 [connection signal="button_down" from="WeaponControl/WeaponIcon" to="WeaponControl" method="_on_weapon_icon_button_down"]
 [connection signal="toggled" from="WeaponControl/WeaponIcon" to="WeaponControl" method="_on_weapon_icon_toggled"]

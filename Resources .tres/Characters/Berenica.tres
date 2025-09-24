@@ -1,14 +1,6 @@
-[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=4 format=3 uid="uid://bktqduywr1uqg"]
+[gd_resource type="Resource" script_class="CharacterDataResource" load_steps=2 format=3 uid="uid://bktqduywr1uqg"]
 
-[ext_resource type="Script" uid="uid://bxdaen2m2qhfs" path="res://Scripts/global/IntronData.gd" id="1_3rmon"]
 [ext_resource type="Script" uid="uid://cwiqti30177xl" path="res://Scripts/global/CharacterDataResource.gd" id="1_ls7yl"]
-
-[sub_resource type="Resource" id="Resource_3rmon"]
-resource_name = "123123"
-script = ExtResource("1_3rmon")
-name = "123"
-description = "123123"
-metadata/_custom_type_script = "uid://bxdaen2m2qhfs"
 
 [resource]
 script = ExtResource("1_ls7yl")
@@ -25,4 +17,7 @@ morale = 52.0
 berserker = 52.0
 weapon_mastery = 2
 level = 23
-intron_1 = SubResource("Resource_3rmon")
+intron = "test"
+intron_1 = "frdy"
+intron_2 = "frf"
+intron_3 = "234"
