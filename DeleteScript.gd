@@ -1,11 +1,31 @@
 extends Control
 
+@onready var hover_helper1 = preload("res://Hover_Tween.gd").new()
+@onready var hover_helper2 = preload("res://Hover_Tween2.gd").new()
+
+func _ready() -> void:
+	hover_helper1.apply_to_all_fullart1(self)
+	hover_helper2.apply_to_all_fullart2(self)
 '''Im going to guess what each hard coded variable COULD be
 weapon_attack = weapon, weapon lvl, weapon intron lvl (duplicates)
 weapon_crit_chance/damage/attack_speed/trigger_probability/multishot are all going to be like weapon_attack
 
 Weaponpassive's are also going to be = weapon, weapon lvl, weapon intron lvl (dupes)
+==================================================
+func _ready():
+	for level in range(1, 21): # 1 to 20 inclusive
+		var value = get_value_for_level(level)
+		print("Level ", level, ": ", value)
 
+# this is the growth rate for weapon_attack probably
+just find the base stat for each weapon, and then  use this math for it.
+
+assume all wedges scale linearly
+
+func get_value_for_level(level: int) -> float:
+	var raw_value = 15.0 * pow(1.0575, level - 1)
+	return round(raw_value * 100) / 100.0
+	=====================================
 weaponwedge = rarity (1-5), 
 
 character_attack = character, character lvl, character intron,
@@ -20,6 +40,8 @@ geniemon_wedge_bonus = geniemon, geniemon lvl,
 
 wedge wedge bonus = some wedges only give "wedge bonus" as a modifier
 '''
+var level: int = 16	
+var value: float = 15.0 * pow(1.0575, level - 1)
 
 #Please input weapon stats with no wedges
 var weapon_attack = 30.85
@@ -255,4 +277,4 @@ func _on_button_26_button_down() -> void:
 	print(effective_dps) #expects 18384.68809
 
 func _on_button_27_button_down() -> void:
-	print(max_hit) #expects 23630.07955
+	print(value) #expects 23630.07955

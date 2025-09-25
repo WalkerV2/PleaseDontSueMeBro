@@ -1,0 +1,480 @@
+[gd_scene load_steps=17 format=3 uid="uid://djiwld2orju8"]
+
+[ext_resource type="Script" uid="uid://cnwrkngh62yc4" path="res://DeleteScript.gd" id="1_pc1bb"]
+[ext_resource type="Texture2D" uid="uid://bhr0w7b7bwkdw" path="res://Assets/Images/Splash Art/bg-left-03.jpg" id="2_2tt48"]
+[ext_resource type="Script" uid="uid://h54ldheawrlb" path="res://buttonbigtest.gd" id="3_rcf0v"]
+[ext_resource type="Texture2D" uid="uid://b5sle38hmgw1s" path="res://Gold background.webp" id="4_h0c3x"]
+[ext_resource type="Texture2D" uid="uid://b8px1o74c3l7k" path="res://Assets/Images/Avatar/Fullart/Berenica.png" id="5_5qpay"]
+[ext_resource type="Script" uid="uid://dirjhn2bj5amn" path="res://button_28.gd" id="6_6srww"]
+[ext_resource type="Texture2D" uid="uid://bxlyhohrpp21j" path="res://Assets/Images/GreyGradient.png" id="7_5qpay"]
+[ext_resource type="Texture2D" uid="uid://kuwfa4fmypub" path="res://Assets/Images/GreenGradient.png" id="8_6srww"]
+[ext_resource type="Texture2D" uid="uid://bs5i45rj54yvi" path="res://Assets/Images/BlueGradient.png" id="9_8v26j"]
+[ext_resource type="Texture2D" uid="uid://dg86wt854g342" path="res://Assets/Images/PurpleGradient.png" id="10_5fkrd"]
+[ext_resource type="Texture2D" uid="uid://eh5ydqarosdm" path="res://Assets/Images/OrangeGradient.png" id="11_00wd0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6534h"]
+texture = ExtResource("7_5qpay")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mgf1"]
+texture = ExtResource("8_6srww")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gips5"]
+texture = ExtResource("9_8v26j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cvue"]
+texture = ExtResource("10_5fkrd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0dwtu"]
+texture = ExtResource("11_00wd0")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pc1bb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2tt48")
+expand_mode = 1
+
+[node name="SelectionsContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -258.0
+offset_right = 258.0
+offset_bottom = 300.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("3_rcf0v")
+
+[node name="CharacterWedge" type="TextureButton" parent="SelectionsContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("4_h0c3x")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Fullart3" type="TextureRect" parent="SelectionsContainer/CharacterWedge"]
+visible = false
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(361, 300)
+mouse_filter = 2
+texture = ExtResource("5_5qpay")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Character" type="TextureButton" parent="SelectionsContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("4_h0c3x")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Fullart3" type="TextureRect" parent="SelectionsContainer/Character"]
+visible = false
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(361, 300)
+mouse_filter = 2
+texture = ExtResource("5_5qpay")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Geniemon" type="TextureButton" parent="SelectionsContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("4_h0c3x")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Fullart3" type="TextureRect" parent="SelectionsContainer/Geniemon"]
+visible = false
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(361, 300)
+mouse_filter = 2
+texture = ExtResource("5_5qpay")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Weapon" type="TextureButton" parent="SelectionsContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("4_h0c3x")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Fullart3" type="TextureRect" parent="SelectionsContainer/Weapon"]
+visible = false
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(361, 300)
+mouse_filter = 2
+texture = ExtResource("5_5qpay")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="WeaponWedge" type="TextureButton" parent="SelectionsContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("4_h0c3x")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Fullart3" type="TextureRect" parent="SelectionsContainer/WeaponWedge"]
+visible = false
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(361, 300)
+mouse_filter = 2
+texture = ExtResource("5_5qpay")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Button7" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "7"
+
+[node name="Button8" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "8"
+
+[node name="Button9" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "9"
+
+[node name="Button10" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "10"
+
+[node name="Button11" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "11"
+
+[node name="Button12" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "12"
+
+[node name="Button13" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "13"
+
+[node name="Button14" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "14"
+
+[node name="Button15" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "15"
+
+[node name="Button16" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "16"
+
+[node name="Button17" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "17"
+
+[node name="Button18" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "18"
+
+[node name="Button19" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "19"
+
+[node name="Button20" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "20"
+
+[node name="Button21" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "21"
+
+[node name="Button22" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "22"
+
+[node name="Button23" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "23"
+
+[node name="Button24" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "24"
+
+[node name="Button25" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "25"
+
+[node name="Button26" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "26"
+
+[node name="Button27" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "27"
+
+[node name="Button28" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "28"
+script = ExtResource("6_6srww")
+
+[node name="Button29" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "29"
+
+[node name="Button30" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "30"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1924.0
+offset_top = 12.0
+offset_right = 2904.0
+offset_bottom = 1168.0
+text = "come up with some good ui designs for character select,
+
+come up with a set of filter options and outline what the user would want to outline/filter by
+
+characters hould be organized alphabetically
+could also have 
+character  type organized
+
+the leveling mechanic should be easy to see/use
+
+one day include leveling cost/calculator
+
+have filters for all weapons/wedges/geniemon/
+
+stylize the backgrounds behind everything to fit the theme of the item
+
+come up with the stencil text thing
+to make own custom text
+
+buttons at top
+when toggled extends down
+shows filters on sides of button
+
+has huge selection for everything below
+in tiered/stylized scroll containers
+ with options to show/hide the tiers
+
+top right should show all stats
+
+not sure what to show in top left
+ except maybe music
+
+as for filter options
+the 6 types of damage are
+#Hydro, #pyro, #electro, #anemo, #lumino, #umbro
+
+
+"
+
+[node name="GoldCharWedge" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GreyContainer" type="ScrollContainer" parent="GoldCharWedge"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_6534h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GoldCharWedge/GreyContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="GoldCharWedge/GreyContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="GreenContainer" type="ScrollContainer" parent="GoldCharWedge"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3mgf1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GoldCharWedge/GreenContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Button2" type="Button" parent="GoldCharWedge/GreenContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="BlueContainer" type="ScrollContainer" parent="GoldCharWedge"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gips5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GoldCharWedge/BlueContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Button3" type="Button" parent="GoldCharWedge/BlueContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="PurpleContainer" type="ScrollContainer" parent="GoldCharWedge"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_3cvue")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GoldCharWedge/PurpleContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Button4" type="Button" parent="GoldCharWedge/PurpleContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GoldContainer" type="ScrollContainer" parent="GoldCharWedge"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0dwtu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GoldCharWedge/GoldContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Button5" type="Button" parent="GoldCharWedge/GoldContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[connection signal="button_down" from="HBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button5" to="." method="_on_button_5_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button6" to="." method="_on_button_6_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button7" to="." method="_on_button_7_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button8" to="." method="_on_button_8_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button9" to="." method="_on_button_9_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button10" to="." method="_on_button_10_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button11" to="." method="_on_button_11_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button12" to="." method="_on_button_12_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button13" to="." method="_on_button_13_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button14" to="." method="_on_button_14_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button15" to="." method="_on_button_15_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button16" to="." method="_on_button_16_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button17" to="." method="_on_button_17_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button18" to="." method="_on_button_18_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button19" to="." method="_on_button_19_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button20" to="." method="_on_button_20_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button21" to="." method="_on_button_21_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button22" to="." method="_on_button_22_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button23" to="." method="_on_button_23_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button24" to="." method="_on_button_24_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button25" to="." method="_on_button_25_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button26" to="." method="_on_button_26_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button27" to="." method="_on_button_27_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button28" to="." method="_on_button_28_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button29" to="." method="_on_button_29_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button30" to="." method="_on_button_30_button_down"]
